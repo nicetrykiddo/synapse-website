@@ -1,0 +1,1274 @@
+{
+  "field": {
+    "raw": {
+      "shape": [
+        2300,
+        8
+      ],
+      "memory_usage": "1020.76 KB",
+      "total_missing": 736,
+      "missing_percentage": 4.0,
+      "duplicate_rows": 0,
+      "columns": [
+        "reportId",
+        "productId",
+        "serialNo",
+        "failureDate",
+        "location",
+        "failureMode",
+        "severity",
+        "reportedBy"
+      ],
+      "dtypes": {
+        "reportId": "object",
+        "productId": "object",
+        "serialNo": "object",
+        "failureDate": "object",
+        "location": "object",
+        "failureMode": "object",
+        "severity": "float64",
+        "reportedBy": "object"
+      },
+      "column_stats": {
+        "reportId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2300,
+          "dtype": "object",
+          "top_values": {
+            "R300000": 1,
+            "R300001": 1,
+            "R300002": 1,
+            "R300003": 1,
+            "R300004": 1
+          },
+          "most_frequent": "R300000",
+          "frequency_of_most_common": 1
+        },
+        "productId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 60,
+          "dtype": "object",
+          "top_values": {
+            "P1005": 64,
+            "P1025": 60,
+            "P1026": 52,
+            "P1015": 50,
+            "P1021": 50
+          },
+          "most_frequent": "P1005",
+          "frequency_of_most_common": 64
+        },
+        "serialNo": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2300,
+          "dtype": "object",
+          "top_values": {
+            "SN400000": 1,
+            "SN400001": 1,
+            "SN400002": 1,
+            "SN400003": 1,
+            "SN400004": 1
+          },
+          "most_frequent": "SN400000",
+          "frequency_of_most_common": 1
+        },
+        "failureDate": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 828,
+          "dtype": "object",
+          "top_values": {
+            "2024-08-08": 8,
+            "2023-08-05": 8,
+            "2023-06-24": 7,
+            "2023-09-17": 7,
+            "2023-06-19": 7
+          },
+          "most_frequent": "2023-08-05",
+          "frequency_of_most_common": 8
+        },
+        "location": {
+          "missing_count": 187,
+          "missing_percentage": 8.130434782608695,
+          "completeness": 91.8695652173913,
+          "unique_values": 16,
+          "dtype": "object",
+          "top_values": {
+            "Hyderabad": 152,
+            "Village_C": 141,
+            "Jaipur": 141,
+            "Village_B": 140,
+            "Kolkata": 139
+          },
+          "most_frequent": "Hyderabad",
+          "frequency_of_most_common": 152
+        },
+        "failureMode": {
+          "missing_count": 197,
+          "missing_percentage": 8.565217391304348,
+          "completeness": 91.43478260869566,
+          "unique_values": 6,
+          "dtype": "object",
+          "top_values": {
+            "pad_wear": 376,
+            "sensor_failure": 360,
+            "leakage": 349,
+            "brake_shim_wear": 344,
+            "overheating": 343
+          },
+          "most_frequent": "pad_wear",
+          "frequency_of_most_common": 376
+        },
+        "severity": {
+          "missing_count": 169,
+          "missing_percentage": 7.3478260869565215,
+          "completeness": 92.65217391304348,
+          "unique_values": 5,
+          "dtype": "float64",
+          "mean": 3.311121539183482,
+          "median": 3.0,
+          "std": 1.0913071843744553,
+          "min": 1.0,
+          "max": 5.0,
+          "q25": 3.0,
+          "q75": 4.0,
+          "skewness": -0.12324573359995604,
+          "kurtosis": -0.5923893516345502,
+          "outliers_count": 114,
+          "outliers_percentage": 4.956521739130435
+        },
+        "reportedBy": {
+          "missing_count": 183,
+          "missing_percentage": 7.956521739130435,
+          "completeness": 92.04347826086956,
+          "unique_values": 2,
+          "dtype": "object",
+          "top_values": {
+            "customer": 1093,
+            "dealer": 1024
+          },
+          "most_frequent": "customer",
+          "frequency_of_most_common": 1093
+        }
+      },
+      "quality_score": 97.6
+    },
+    "cleaned": {
+      "shape": [
+        2300,
+        8
+      ],
+      "memory_usage": "1039.21 KB",
+      "total_missing": 0,
+      "missing_percentage": 0.0,
+      "duplicate_rows": 0,
+      "columns": [
+        "reportid",
+        "productid",
+        "serialno",
+        "failuredate",
+        "location",
+        "failuremode",
+        "severity",
+        "reportedby"
+      ],
+      "dtypes": {
+        "reportid": "object",
+        "productid": "object",
+        "serialno": "object",
+        "failuredate": "object",
+        "location": "object",
+        "failuremode": "object",
+        "severity": "float64",
+        "reportedby": "object"
+      },
+      "column_stats": {
+        "reportid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2300,
+          "dtype": "object",
+          "top_values": {
+            "R300000": 1,
+            "R300001": 1,
+            "R300002": 1,
+            "R300003": 1,
+            "R300004": 1
+          },
+          "most_frequent": "R300000",
+          "frequency_of_most_common": 1
+        },
+        "productid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 60,
+          "dtype": "object",
+          "top_values": {
+            "P1005": 64,
+            "P1025": 60,
+            "P1026": 52,
+            "P1015": 50,
+            "P1021": 50
+          },
+          "most_frequent": "P1005",
+          "frequency_of_most_common": 64
+        },
+        "serialno": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2300,
+          "dtype": "object",
+          "top_values": {
+            "SN400000": 1,
+            "SN400001": 1,
+            "SN400002": 1,
+            "SN400003": 1,
+            "SN400004": 1
+          },
+          "most_frequent": "SN400000",
+          "frequency_of_most_common": 1
+        },
+        "failuredate": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 828,
+          "dtype": "object",
+          "top_values": {
+            "08/08/2024": 8,
+            "05/08/2023": 8,
+            "24/06/2023": 7,
+            "17/09/2023": 7,
+            "19/06/2023": 7
+          },
+          "most_frequent": "05/08/2023",
+          "frequency_of_most_common": 8
+        },
+        "location": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 16,
+          "dtype": "object",
+          "top_values": {
+            "Hyderabad": 339,
+            "Village_C": 141,
+            "Jaipur": 141,
+            "Village_B": 140,
+            "Kolkata": 139
+          },
+          "most_frequent": "Hyderabad",
+          "frequency_of_most_common": 339
+        },
+        "failuremode": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 6,
+          "dtype": "object",
+          "top_values": {
+            "pad_wear": 573,
+            "sensor_failure": 360,
+            "leakage": 349,
+            "brake_shim_wear": 344,
+            "overheating": 343
+          },
+          "most_frequent": "pad_wear",
+          "frequency_of_most_common": 573
+        },
+        "severity": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "float64",
+          "mean": 3.2882608695652173,
+          "median": 3.0,
+          "std": 1.0535639392603215,
+          "min": 1.0,
+          "max": 5.0,
+          "q25": 3.0,
+          "q75": 4.0,
+          "skewness": -0.0636264791086665,
+          "kurtosis": -0.43988377195636374,
+          "outliers_count": 114,
+          "outliers_percentage": 4.956521739130435
+        },
+        "reportedby": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2,
+          "dtype": "object",
+          "top_values": {
+            "customer": 1276,
+            "dealer": 1024
+          },
+          "most_frequent": "customer",
+          "frequency_of_most_common": 1276
+        }
+      },
+      "quality_score": 100.0
+    }
+  },
+  "manufacturing": {
+    "raw": {
+      "shape": [
+        2500,
+        7
+      ],
+      "memory_usage": "930.34 KB",
+      "total_missing": 479,
+      "missing_percentage": 2.737142857142857,
+      "duplicate_rows": 0,
+      "columns": [
+        "batchId",
+        "productId",
+        "productionDate",
+        "machineId",
+        "operatorId",
+        "producedQty",
+        "shift"
+      ],
+      "dtypes": {
+        "batchId": "object",
+        "productId": "object",
+        "productionDate": "object",
+        "machineId": "object",
+        "operatorId": "object",
+        "producedQty": "float64",
+        "shift": "object"
+      },
+      "column_stats": {
+        "batchId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2500,
+          "dtype": "object",
+          "top_values": {
+            "B100000": 1,
+            "B100001": 1,
+            "B100002": 1,
+            "B100003": 1,
+            "B100004": 1
+          },
+          "most_frequent": "B100000",
+          "frequency_of_most_common": 1
+        },
+        "productId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 60,
+          "dtype": "object",
+          "top_values": {
+            "P1005": 56,
+            "P1036": 56,
+            "P1025": 53,
+            "P1021": 53,
+            "P1032": 52
+          },
+          "most_frequent": "P1005",
+          "frequency_of_most_common": 56
+        },
+        "productionDate": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 946,
+          "dtype": "object",
+          "top_values": {
+            "2023-10-14": 9,
+            "2025-06-20": 8,
+            "2025-03-31": 8,
+            "2025-02-22": 8,
+            "2024-07-16": 8
+          },
+          "most_frequent": "2023-10-14",
+          "frequency_of_most_common": 9
+        },
+        "machineId": {
+          "missing_count": 155,
+          "missing_percentage": 6.2,
+          "completeness": 93.8,
+          "unique_values": 15,
+          "dtype": "object",
+          "top_values": {
+            "M2": 179,
+            "M12": 179,
+            "M6": 173,
+            "M3": 169,
+            "M4": 161
+          },
+          "most_frequent": "M12",
+          "frequency_of_most_common": 179
+        },
+        "operatorId": {
+          "missing_count": 151,
+          "missing_percentage": 6.04,
+          "completeness": 93.96,
+          "unique_values": 40,
+          "dtype": "object",
+          "top_values": {
+            "O35": 76,
+            "O36": 74,
+            "O21": 74,
+            "O24": 71,
+            "O7": 70
+          },
+          "most_frequent": "O35",
+          "frequency_of_most_common": 76
+        },
+        "producedQty": {
+          "missing_count": 173,
+          "missing_percentage": 6.92,
+          "completeness": 93.08,
+          "unique_values": 353,
+          "dtype": "float64",
+          "mean": 250.05758487322734,
+          "median": 251.0,
+          "std": 70.0974333690608,
+          "min": 10.0,
+          "max": 462.0,
+          "q25": 204.0,
+          "q75": 296.0,
+          "skewness": -0.09001349894132167,
+          "kurtosis": 0.11088588698595325,
+          "outliers_count": 24,
+          "outliers_percentage": 0.96
+        },
+        "shift": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 3,
+          "dtype": "object",
+          "top_values": {
+            "MORNING": 991,
+            "AFTERNOON": 892,
+            "NIGHT": 617
+          },
+          "most_frequent": "MORNING",
+          "frequency_of_most_common": 991
+        }
+      },
+      "quality_score": 98.35771428571428
+    },
+    "cleaned": {
+      "shape": [
+        2500,
+        7
+      ],
+      "memory_usage": "813.15 KB",
+      "total_missing": 2500,
+      "missing_percentage": 14.285714285714285,
+      "duplicate_rows": 0,
+      "columns": [
+        "batchid",
+        "productid",
+        "productiondate",
+        "machineid",
+        "operatorid",
+        "producedqty",
+        "shift"
+      ],
+      "dtypes": {
+        "batchid": "object",
+        "productid": "object",
+        "productiondate": "object",
+        "machineid": "float64",
+        "operatorid": "object",
+        "producedqty": "float64",
+        "shift": "object"
+      },
+      "column_stats": {
+        "batchid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2500,
+          "dtype": "object",
+          "top_values": {
+            "B100000": 1,
+            "B100001": 1,
+            "B100002": 1,
+            "B100003": 1,
+            "B100004": 1
+          },
+          "most_frequent": "B100000",
+          "frequency_of_most_common": 1
+        },
+        "productid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 60,
+          "dtype": "object",
+          "top_values": {
+            "P1005": 56,
+            "P1036": 56,
+            "P1025": 53,
+            "P1021": 53,
+            "P1032": 52
+          },
+          "most_frequent": "P1005",
+          "frequency_of_most_common": 56
+        },
+        "productiondate": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 946,
+          "dtype": "object",
+          "top_values": {
+            "14/10/2023": 9,
+            "20/06/2025": 8,
+            "31/03/2025": 8,
+            "22/02/2025": 8,
+            "16/07/2024": 8
+          },
+          "most_frequent": "14/10/2023",
+          "frequency_of_most_common": 9
+        },
+        "machineid": {
+          "missing_count": 2500,
+          "missing_percentage": 100.0,
+          "completeness": 0.0,
+          "unique_values": 0,
+          "dtype": "float64",
+          "mean": null,
+          "median": null,
+          "std": null,
+          "min": null,
+          "max": null,
+          "q25": null,
+          "q75": null,
+          "skewness": null,
+          "kurtosis": null
+        },
+        "operatorid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 40,
+          "dtype": "object",
+          "top_values": {
+            "O35": 227,
+            "O36": 74,
+            "O21": 74,
+            "O24": 71,
+            "O7": 70
+          },
+          "most_frequent": "O35",
+          "frequency_of_most_common": 227
+        },
+        "producedqty": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 353,
+          "dtype": "float64",
+          "mean": 250.1228,
+          "median": 251.0,
+          "std": 67.62800262358444,
+          "min": 10.0,
+          "max": 462.0,
+          "q25": 209.0,
+          "q75": 292.0,
+          "skewness": -0.0961887068962388,
+          "kurtosis": 0.34250425969518705,
+          "outliers_count": 48,
+          "outliers_percentage": 1.92
+        },
+        "shift": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 3,
+          "dtype": "object",
+          "top_values": {
+            "MORNING": 991,
+            "AFTERNOON": 892,
+            "NIGHT": 617
+          },
+          "most_frequent": "MORNING",
+          "frequency_of_most_common": 991
+        }
+      },
+      "quality_score": 91.42857142857143
+    }
+  },
+  "sales": {
+    "raw": {
+      "shape": [
+        2700,
+        7
+      ],
+      "memory_usage": "735.46 KB",
+      "total_missing": 450,
+      "missing_percentage": 2.380952380952381,
+      "duplicate_rows": 0,
+      "columns": [
+        "orderId",
+        "productId",
+        "date",
+        "channel",
+        "qty",
+        "unitPrice",
+        "totalPrice"
+      ],
+      "dtypes": {
+        "orderId": "object",
+        "productId": "object",
+        "date": "object",
+        "channel": "object",
+        "qty": "int64",
+        "unitPrice": "float64",
+        "totalPrice": "float64"
+      },
+      "column_stats": {
+        "orderId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2700,
+          "dtype": "object",
+          "top_values": {
+            "O500000": 1,
+            "O500001": 1,
+            "O500002": 1,
+            "O500003": 1,
+            "O500004": 1
+          },
+          "most_frequent": "O500000",
+          "frequency_of_most_common": 1
+        },
+        "productId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 60,
+          "dtype": "object",
+          "top_values": {
+            "P1029": 66,
+            "P1012": 66,
+            "P1013": 64,
+            "P1015": 58,
+            "P1057": 53
+          },
+          "most_frequent": "P1012",
+          "frequency_of_most_common": 66
+        },
+        "date": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 974,
+          "dtype": "object",
+          "top_values": {
+            "2025-04-12": 9,
+            "2025-11-11": 8,
+            "2024-08-26": 8,
+            "2023-06-24": 7,
+            "2024-10-25": 7
+          },
+          "most_frequent": "2025-04-12",
+          "frequency_of_most_common": 9
+        },
+        "channel": {
+          "missing_count": 149,
+          "missing_percentage": 5.518518518518518,
+          "completeness": 94.48148148148148,
+          "unique_values": 3,
+          "dtype": "object",
+          "top_values": {
+            "dealer": 1255,
+            "online": 763,
+            "wholesale": 533
+          },
+          "most_frequent": "dealer",
+          "frequency_of_most_common": 1255
+        },
+        "qty": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 99,
+          "dtype": "int64",
+          "mean": 25.902962962962963,
+          "median": 22.0,
+          "std": 17.557596704458714,
+          "min": 1.0,
+          "max": 108.0,
+          "q25": 14.0,
+          "q75": 33.0,
+          "skewness": 1.3477558808868444,
+          "kurtosis": 2.1346679602198524,
+          "outliers_count": 143,
+          "outliers_percentage": 5.296296296296296
+        },
+        "unitPrice": {
+          "missing_count": 151,
+          "missing_percentage": 5.592592592592593,
+          "completeness": 94.4074074074074,
+          "unique_values": 2538,
+          "dtype": "float64",
+          "mean": 2671.8699882306787,
+          "median": 2364.54,
+          "std": 1306.3340352312239,
+          "min": 471.86,
+          "max": 5497.55,
+          "q25": 1576.12,
+          "q75": 3832.23,
+          "skewness": 0.3796029295597905,
+          "kurtosis": -1.050612254259483,
+          "outliers_count": 0,
+          "outliers_percentage": 0.0
+        },
+        "totalPrice": {
+          "missing_count": 150,
+          "missing_percentage": 5.555555555555555,
+          "completeness": 94.44444444444444,
+          "unique_values": 2550,
+          "dtype": "float64",
+          "mean": 69033.73950980393,
+          "median": 51217.92,
+          "std": 61904.72530826326,
+          "min": 534.04,
+          "max": 488001.64,
+          "q25": 27530.85,
+          "q75": 91239.62,
+          "skewness": 2.0395496590779243,
+          "kurtosis": 5.69679146521735,
+          "outliers_count": 133,
+          "outliers_percentage": 4.925925925925926
+        }
+      },
+      "quality_score": 98.57142857142857
+    },
+    "cleaned": {
+      "shape": [
+        2700,
+        7
+      ],
+      "memory_usage": "739.97 KB",
+      "total_missing": 0,
+      "missing_percentage": 0.0,
+      "duplicate_rows": 0,
+      "columns": [
+        "orderid",
+        "productid",
+        "date",
+        "channel",
+        "qty",
+        "unitprice",
+        "totalprice"
+      ],
+      "dtypes": {
+        "orderid": "object",
+        "productid": "object",
+        "date": "object",
+        "channel": "object",
+        "qty": "int64",
+        "unitprice": "float64",
+        "totalprice": "float64"
+      },
+      "column_stats": {
+        "orderid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2700,
+          "dtype": "object",
+          "top_values": {
+            "O500000": 1,
+            "O500001": 1,
+            "O500002": 1,
+            "O500003": 1,
+            "O500004": 1
+          },
+          "most_frequent": "O500000",
+          "frequency_of_most_common": 1
+        },
+        "productid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 60,
+          "dtype": "object",
+          "top_values": {
+            "P1029": 66,
+            "P1012": 66,
+            "P1013": 64,
+            "P1015": 58,
+            "P1057": 53
+          },
+          "most_frequent": "P1012",
+          "frequency_of_most_common": 66
+        },
+        "date": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 391,
+          "dtype": "object",
+          "top_values": {
+            "04/12/2025": 1624,
+            "11/11/2025": 8,
+            "10/06/2023": 7,
+            "08/12/2023": 7,
+            "06/06/2025": 7
+          },
+          "most_frequent": "04/12/2025",
+          "frequency_of_most_common": 1624
+        },
+        "channel": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 3,
+          "dtype": "object",
+          "top_values": {
+            "dealer": 1404,
+            "online": 763,
+            "wholesale": 533
+          },
+          "most_frequent": "dealer",
+          "frequency_of_most_common": 1404
+        },
+        "qty": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 99,
+          "dtype": "int64",
+          "mean": 25.902962962962963,
+          "median": 22.0,
+          "std": 17.557596704458714,
+          "min": 1.0,
+          "max": 108.0,
+          "q25": 14.0,
+          "q75": 33.0,
+          "skewness": 1.3477558808868444,
+          "kurtosis": 2.1346679602198524,
+          "outliers_count": 143,
+          "outliers_percentage": 5.296296296296296
+        },
+        "unitprice": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2538,
+          "dtype": "float64",
+          "mean": 2654.6822740740745,
+          "median": 2364.54,
+          "std": 1271.229289710154,
+          "min": 471.86,
+          "max": 5497.55,
+          "q25": 1618.645,
+          "q75": 3722.1825,
+          "skewness": 0.4286673691822244,
+          "kurtosis": -0.925393118278115,
+          "outliers_count": 0,
+          "outliers_percentage": 0.0
+        },
+        "totalprice": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2551,
+          "dtype": "float64",
+          "mean": 68043.97175925926,
+          "median": 51217.92,
+          "std": 60298.22937064411,
+          "min": 534.04,
+          "max": 488001.64,
+          "q25": 28771.7,
+          "q75": 87611.11,
+          "skewness": 2.1320530307670227,
+          "kurtosis": 6.262546561079402,
+          "outliers_count": 154,
+          "outliers_percentage": 5.703703703703704
+        }
+      },
+      "quality_score": 100.0
+    }
+  },
+  "testing": {
+    "raw": {
+      "shape": [
+        3200,
+        9
+      ],
+      "memory_usage": "1255.96 KB",
+      "total_missing": 494,
+      "missing_percentage": 1.7152777777777777,
+      "duplicate_rows": 0,
+      "columns": [
+        "testId",
+        "batchId",
+        "testDate",
+        "testName",
+        "measurementValue",
+        "unit",
+        "thresholdMin",
+        "thresholdMax",
+        "status"
+      ],
+      "dtypes": {
+        "testId": "object",
+        "batchId": "object",
+        "testDate": "object",
+        "testName": "object",
+        "measurementValue": "float64",
+        "unit": "object",
+        "thresholdMin": "int64",
+        "thresholdMax": "int64",
+        "status": "object"
+      },
+      "column_stats": {
+        "testId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 3200,
+          "dtype": "object",
+          "top_values": {
+            "T200000": 1,
+            "T200001": 1,
+            "T200002": 1,
+            "T200003": 1,
+            "T200004": 1
+          },
+          "most_frequent": "T200000",
+          "frequency_of_most_common": 1
+        },
+        "batchId": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 1826,
+          "dtype": "object",
+          "top_values": {
+            "B100572": 7,
+            "B100738": 6,
+            "B102325": 6,
+            "B101692": 6,
+            "B100051": 5
+          },
+          "most_frequent": "B100572",
+          "frequency_of_most_common": 7
+        },
+        "testDate": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 990,
+          "dtype": "object",
+          "top_values": {
+            "2023-12-08": 10,
+            "2024-06-13": 10,
+            "2024-07-13": 10,
+            "2023-06-03": 9,
+            "2025-10-03": 9
+          },
+          "most_frequent": "2023-12-08",
+          "frequency_of_most_common": 10
+        },
+        "testName": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "object",
+          "top_values": {
+            "impact": 663,
+            "hardness": 653,
+            "tensile": 640,
+            "leakage": 636,
+            "fatigue": 608
+          },
+          "most_frequent": "impact",
+          "frequency_of_most_common": 663
+        },
+        "measurementValue": {
+          "missing_count": 195,
+          "missing_percentage": 6.09375,
+          "completeness": 93.90625,
+          "unique_values": 2629,
+          "dtype": "float64",
+          "mean": 32383.45811980033,
+          "median": 194.68,
+          "std": 72576.94448113088,
+          "min": -35168.24,
+          "max": 302637.06,
+          "q25": 25.63,
+          "q75": 463.39,
+          "skewness": 1.9899169729998474,
+          "kurtosis": 2.287910238577504,
+          "outliers_count": 566,
+          "outliers_percentage": 17.6875
+        },
+        "unit": {
+          "missing_count": 152,
+          "missing_percentage": 4.75,
+          "completeness": 95.25,
+          "unique_values": 5,
+          "dtype": "object",
+          "top_values": {
+            "J": 626,
+            "HV": 619,
+            "MPa": 613,
+            "ml/min": 605,
+            "cycles": 585
+          },
+          "most_frequent": "J",
+          "frequency_of_most_common": 626
+        },
+        "thresholdMin": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "int64",
+          "mean": 19104.753125,
+          "median": 150.0,
+          "std": 39185.67890838948,
+          "min": 0.0,
+          "max": 100000.0,
+          "q25": 20.0,
+          "q75": 350.0,
+          "skewness": 1.5811218464004595,
+          "kurtosis": 0.5003246915295336,
+          "outliers_count": 608,
+          "outliers_percentage": 19.0
+        },
+        "thresholdMax": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "int64",
+          "mean": 57170.296875,
+          "median": 250.0,
+          "std": 117626.33413217805,
+          "min": 5.0,
+          "max": 300000.0,
+          "q25": 40.0,
+          "q75": 550.0,
+          "skewness": 1.5811503182078375,
+          "kurtosis": 0.5003664187335661,
+          "outliers_count": 608,
+          "outliers_percentage": 19.0
+        },
+        "status": {
+          "missing_count": 147,
+          "missing_percentage": 4.59375,
+          "completeness": 95.40625,
+          "unique_values": 2,
+          "dtype": "object",
+          "top_values": {
+            "PASS": 2490,
+            "FAIL": 563
+          },
+          "most_frequent": "PASS",
+          "frequency_of_most_common": 2490
+        }
+      },
+      "quality_score": 98.97083333333333
+    },
+    "cleaned": {
+      "shape": [
+        3200,
+        9
+      ],
+      "memory_usage": "1263.98 KB",
+      "total_missing": 0,
+      "missing_percentage": 0.0,
+      "duplicate_rows": 0,
+      "columns": [
+        "testid",
+        "batchid",
+        "testdate",
+        "testname",
+        "measurementvalue",
+        "unit",
+        "thresholdmin",
+        "thresholdmax",
+        "status"
+      ],
+      "dtypes": {
+        "testid": "object",
+        "batchid": "object",
+        "testdate": "object",
+        "testname": "object",
+        "measurementvalue": "float64",
+        "unit": "object",
+        "thresholdmin": "int64",
+        "thresholdmax": "int64",
+        "status": "object"
+      },
+      "column_stats": {
+        "testid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 3200,
+          "dtype": "object",
+          "top_values": {
+            "T200000": 1,
+            "T200001": 1,
+            "T200002": 1,
+            "T200003": 1,
+            "T200004": 1
+          },
+          "most_frequent": "T200000",
+          "frequency_of_most_common": 1
+        },
+        "batchid": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 1826,
+          "dtype": "object",
+          "top_values": {
+            "B100572": 7,
+            "B100738": 6,
+            "B102325": 6,
+            "B101692": 6,
+            "B100051": 5
+          },
+          "most_frequent": "B100572",
+          "frequency_of_most_common": 7
+        },
+        "testdate": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 395,
+          "dtype": "object",
+          "top_values": {
+            "12/08/2023": 1912,
+            "10/03/2025": 9,
+            "06/03/2023": 9,
+            "05/10/2024": 8,
+            "04/04/2023": 8
+          },
+          "most_frequent": "12/08/2023",
+          "frequency_of_most_common": 1912
+        },
+        "testname": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "object",
+          "top_values": {
+            "impact": 663,
+            "hardness": 653,
+            "tensile": 640,
+            "leakage": 636,
+            "fatigue": 608
+          },
+          "most_frequent": "impact",
+          "frequency_of_most_common": 663
+        },
+        "measurementvalue": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2629,
+          "dtype": "float64",
+          "mean": 30421.954453125,
+          "median": 194.68,
+          "std": 70750.54066067934,
+          "min": -35168.24,
+          "max": 302637.06,
+          "q25": 27.06,
+          "q75": 454.525,
+          "skewness": 2.094519975651077,
+          "kurtosis": 2.7287096493694603,
+          "outliers_count": 566,
+          "outliers_percentage": 17.6875
+        },
+        "unit": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "object",
+          "top_values": {
+            "J": 778,
+            "HV": 619,
+            "MPa": 613,
+            "ml/min": 605,
+            "cycles": 585
+          },
+          "most_frequent": "J",
+          "frequency_of_most_common": 778
+        },
+        "thresholdmin": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "int64",
+          "mean": 19104.753125,
+          "median": 150.0,
+          "std": 39185.67890838948,
+          "min": 0.0,
+          "max": 100000.0,
+          "q25": 20.0,
+          "q75": 350.0,
+          "skewness": 1.5811218464004595,
+          "kurtosis": 0.5003246915295336,
+          "outliers_count": 608,
+          "outliers_percentage": 19.0
+        },
+        "thresholdmax": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 5,
+          "dtype": "int64",
+          "mean": 57170.296875,
+          "median": 250.0,
+          "std": 117626.33413217805,
+          "min": 5.0,
+          "max": 300000.0,
+          "q25": 40.0,
+          "q75": 550.0,
+          "skewness": 1.5811503182078375,
+          "kurtosis": 0.5003664187335661,
+          "outliers_count": 608,
+          "outliers_percentage": 19.0
+        },
+        "status": {
+          "missing_count": 0,
+          "missing_percentage": 0.0,
+          "completeness": 100.0,
+          "unique_values": 2,
+          "dtype": "object",
+          "top_values": {
+            "PASS": 2637,
+            "FAIL": 563
+          },
+          "most_frequent": "PASS",
+          "frequency_of_most_common": 2637
+        }
+      },
+      "quality_score": 100.0
+    }
+  }
+}

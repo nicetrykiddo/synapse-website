@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Project Presentation</title>
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-icon">
+                <i class="fas fa-gem"></i>
+            </div>
+            <h1 class="project-title">SYNAPSE PROJECT TEAM 5</h1>
+            <p class="subtitle"><i class="fas fa-star"></i> Academic Research Project 2025 <i class="fas fa-star"></i></p>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+        <div class="container">
+            <button class="tab-btn active" data-tab="overview">
+                <i class="fas fa-crown"></i> Overview
+            </button>
+            <button class="tab-btn" data-tab="raw-data">
+                <i class="fas fa-database"></i> Raw Data
+            </button>
+            <button class="tab-btn" data-tab="cleaned-data">
+                <i class="fas fa-check-circle"></i> Cleaned Data
+            </button>
+            <button class="tab-btn" data-tab="analytics">
+                <i class="fas fa-chart-line"></i> Analytics Dashboard
+            </button>
+            <button class="tab-btn" data-tab="academics">
+                <i class="fas fa-graduation-cap"></i> Academics
+            </button>
+        </div>
+    </nav>
+
+    <!-- Overview Section -->
+    <section class="tab-content active" id="overview">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="metric-value" id="total-records">10,700</div>
+                    <div class="metric-label">Total Records</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <div class="metric-value" id="cleaned-records">10,700</div>
+                    <div class="metric-label">Cleaned Records</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="metric-value" id="data-quality">97.4%</div>
+                    <div class="metric-label">Avg Quality Score</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-value" id="fields-analyzed">4</div>
+                    <div class="metric-label">Datasets Analyzed</div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2><i class="fas fa-book-open"></i> Project Summary</h2>
+                <p>This presentation showcases our comprehensive data analysis workflow, from raw data collection to cleaned, structured datasets ready for analysis. Navigate through different datasets using the Raw Data tab, compare data quality metrics, and explore the data cleaning pipeline effectiveness.</p>
+            </div>
+
+            <div class="info-section" style="margin-top: 2rem;">
+                <h2><i class="fas fa-chart-pie"></i> Available Datasets</h2>
+                <p>This dashboard provides access to four key datasets:</p>
+                <div style="margin-top: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 10px; border-left: 3px solid var(--gold);">
+                        <strong style="color: var(--gold);"><i class="fas fa-flag"></i> Field Reports</strong>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Field failure and incident reports from customer locations</p>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 10px; border-left: 3px solid var(--gold);">
+                        <strong style="color: var(--gold);"><i class="fas fa-industry"></i> Manufacturing Data</strong>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Manufacturing process and quality control data</p>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 10px; border-left: 3px solid var(--gold);">
+                        <strong style="color: var(--gold);"><i class="fas fa-shopping-cart"></i> Sales Data</strong>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Sales transactions and customer purchase records</p>
+                    </div>
+                    <div style="padding: 1rem; background: var(--bg-tertiary); border-radius: 10px; border-left: 3px solid var(--gold);">
+                        <strong style="color: var(--gold);"><i class="fas fa-flask"></i> Testing Data</strong>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">Product testing and quality assurance measurements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Raw Data Section -->
+    <section class="tab-content" id="raw-data">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-table"></i> Raw Data Overview</h2>
+                <div class="controls">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="raw-search" placeholder="Search raw data..." class="search-input">
+                    </div>
+                    <select id="raw-limit" class="limit-select">
+                        <option value="50">Show 50 rows</option>
+                        <option value="100">Show 100 rows</option>
+                        <option value="200">Show 200 rows</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Data Quality Indicators -->
+            <div class="quality-indicators">
+                <div class="quality-card">
+                    <div class="quality-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Data Completeness</span>
+                    </div>
+                    <div class="quality-progress">
+                        <div class="progress-bar" id="raw-completeness-bar"></div>
+                    </div>
+                    <div class="quality-value" id="raw-completeness">0%</div>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data Validity</span>
+                    </div>
+                    <div class="quality-progress">
+                        <div class="progress-bar" id="raw-validity-bar"></div>
+                    </div>
+                    <div class="quality-value" id="raw-validity">0%</div>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-header">
+                        <i class="fas fa-check-double"></i>
+                        <span>Data Consistency</span>
+                    </div>
+                    <div class="quality-progress">
+                        <div class="progress-bar" id="raw-consistency-bar"></div>
+                    </div>
+                    <div class="quality-value" id="raw-consistency">0%</div>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <span class="stat-item">Total Rows: <strong id="raw-total">2000</strong></span>
+                <span class="stat-item">Missing Values: <strong id="raw-missing">153</strong></span>
+                <span class="stat-item">Null Fields: <strong id="raw-nulls">0</strong></span>
+                <span class="stat-item">Issues Found: <strong id="raw-issues">47</strong></span>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table" id="raw-data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Value</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="raw-data-body">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination" id="raw-pagination">
+                <button class="page-btn" id="raw-prev">Previous</button>
+                <span class="page-info" id="raw-page-info">Page 1 of 40</span>
+                <button class="page-btn" id="raw-next">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cleaned Data Section -->
+    <section class="tab-content" id="cleaned-data">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-table"></i> Cleaned Data Overview</h2>
+                <div class="controls">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="cleaned-search" placeholder="Search cleaned data..." class="search-input">
+                    </div>
+                    <select id="cleaned-limit" class="limit-select">
+                        <option value="50">Show 50 rows</option>
+                        <option value="100">Show 100 rows</option>
+                        <option value="200">Show 200 rows</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Data Quality Indicators -->
+            <div class="quality-indicators success-theme">
+                <div class="quality-card">
+                    <div class="quality-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Data Completeness</span>
+                    </div>
+                    <div class="quality-progress">
+                        <div class="progress-bar success" id="cleaned-completeness-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="quality-value success">100%</div>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data Validity</span>
+                    </div>
+                    <div class="quality-progress">
+                        <div class="progress-bar success" id="cleaned-validity-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="quality-value success">100%</div>
+                </div>
+                <div class="quality-card">
+                    <div class="quality-header">
+                        <i class="fas fa-check-double"></i>
+                        <span>Data Consistency</span>
+                    </div>
+                    <div class="quality-progress">
+                        <div class="progress-bar success" id="cleaned-consistency-bar" style="width: 100%"></div>
+                    </div>
+                    <div class="quality-value success">100%</div>
+                </div>
+            </div>
+
+            <div class="stats-bar success">
+                <span class="stat-item">Total Rows: <strong id="cleaned-total">1847</strong></span>
+                <span class="stat-item">Missing Values: <strong id="cleaned-missing">0</strong></span>
+                <span class="stat-item">Null Fields: <strong id="cleaned-nulls">0</strong></span>
+                <span class="stat-item">Quality Score: <strong id="cleaned-quality">100%</strong></span>
+            </div>
+
+            <!-- Analytics Panel -->
+            <div class="analytics-panel">
+                <h3><i class="fas fa-chart-line"></i> Data Analytics Summary</h3>
+                <div class="analytics-grid" id="cleaned-analytics">
+                    <!-- Analytics will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table" id="cleaned-data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Value</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cleaned-data-body">
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination" id="cleaned-pagination">
+                <button class="page-btn" id="cleaned-prev">Previous</button>
+                <span class="page-info" id="cleaned-page-info">Page 1 of 37</span>
+                <button class="page-btn" id="cleaned-next">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="tab-content" id="analytics">
+        <div class="container">
+            <div class="analytics-layout">
+                <!-- Analytics Sidebar -->
+                <aside class="analytics-sidebar">
+                    <h3 class="sidebar-title"><i class="fas fa-chart-bar"></i> Analytics</h3>
+                    <nav class="sidebar-nav analytics-nav">
+                        <button class="sidebar-btn active" data-analytics="overview-analytics">
+                            <i class="fas fa-home"></i>
+                            <span>Overview</span>
+                        </button>
+                        <button class="sidebar-btn" data-analytics="field-analytics">
+                            <i class="fas fa-flag"></i>
+                            <span>Field Reports</span>
+                        </button>
+                        <button class="sidebar-btn" data-analytics="manufacturing-analytics">
+                            <i class="fas fa-industry"></i>
+                            <span>Manufacturing</span>
+                        </button>
+                        <button class="sidebar-btn" data-analytics="sales-analytics">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Sales Data</span>
+                        </button>
+                        <button class="sidebar-btn" data-analytics="testing-analytics">
+                            <i class="fas fa-flask"></i>
+                            <span>Testing Data</span>
+                        </button>
+                        <button class="sidebar-btn" data-analytics="comparison-analytics">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>Comparison</span>
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Analytics Content -->
+                <main class="analytics-content">
+                    <!-- Overview Analytics -->
+                    <div class="analytics-section active" id="overview-analytics">
+                        <div class="analytics-metrics-grid">
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-database"></i></div>
+                                <div class="metric-value">10,700</div>
+                                <div class="metric-label">Total Records</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="metric-value">4</div>
+                                <div class="metric-label">Datasets</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Data Completeness</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-award"></i></div>
+                                <div class="metric-value">97.4%</div>
+                                <div class="metric-label">Avg Quality Score</div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-insights-panel">
+                            <h3><i class="fas fa-lightbulb"></i> Key Findings</h3>
+                            <div class="insight-item">
+                                <i class="fas fa-check-circle"></i>
+                                Processed 10,700 records across 4 datasets
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-check-circle"></i>
+                                Maintained 10,700 clean records with zero data loss
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-check-circle"></i>
+                                All datasets achieved 100% data completeness after cleaning
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-check-circle"></i>
+                                All missing values successfully handled across all datasets
+                            </div>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-bar"></i> Data Quality Overview</h3>
+                            <img src="visualizations/quality_dashboard.png" alt="Quality Dashboard" class="viz-image">
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-project-diagram"></i> Comprehensive Summary</h3>
+                            <img src="visualizations/comprehensive_summary.png" alt="Comprehensive Summary" class="viz-image">
+                        </div>
+                    </div>
+
+                    <!-- Field Reports Analytics -->
+                    <div class="analytics-section" id="field-analytics">
+                        <h2 class="analytics-section-title">
+                            <i class="fas fa-flag"></i> Field Reports Analysis
+                        </h2>
+
+                        <div class="analytics-metrics-grid">
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-table"></i></div>
+                                <div class="metric-value">2,300</div>
+                                <div class="metric-label">Total Reports</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-check"></i></div>
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Data Quality</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                <div class="metric-value">6</div>
+                                <div class="metric-label">Failure Types</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="metric-value">16</div>
+                                <div class="metric-label">Locations</div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-insights-panel">
+                            <h3><i class="fas fa-lightbulb"></i> Field Reports Insights</h3>
+                            <div class="insight-item">
+                                <i class="fas fa-star"></i>
+                                Excellent data quality after cleaning
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-star"></i>
+                                Most common failure mode: pad_wear (573 occurrences)
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-star"></i>
+                                Geographic hotspot: Hyderabad (339 reports)
+                            </div>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-area"></i> Detailed Field Analysis</h3>
+                            <img src="visualizations/field_analysis.png" alt="Field Analysis" class="viz-image">
+                        </div>
+                    </div>
+
+                    <!-- Manufacturing Analytics -->
+                    <div class="analytics-section" id="manufacturing-analytics">
+                        <h2 class="analytics-section-title">
+                            <i class="fas fa-industry"></i> Manufacturing Data Analysis
+                        </h2>
+
+                        <div class="analytics-metrics-grid">
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-boxes"></i></div>
+                                <div class="metric-value">2,500</div>
+                                <div class="metric-label">Production Batches</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-cogs"></i></div>
+                                <div class="metric-value">250</div>
+                                <div class="metric-label">Avg Production Qty</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-clock"></i></div>
+                                <div class="metric-value">3</div>
+                                <div class="metric-label">Shifts</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-users"></i></div>
+                                <div class="metric-value">40</div>
+                                <div class="metric-label">Operators</div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-insights-panel">
+                            <h3><i class="fas fa-lightbulb"></i> Manufacturing Insights</h3>
+                            <div class="insight-item">
+                                <i class="fas fa-chart-line"></i>
+                                Average production quantity: 250 units per batch
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-clock"></i>
+                                Morning shift has highest production volume (991 batches)
+                            </div>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-area"></i> Detailed Manufacturing Analysis</h3>
+                            <img src="visualizations/manufacturing_analysis.png" alt="Manufacturing Analysis" class="viz-image">
+                        </div>
+                    </div>
+
+                    <!-- Sales Analytics -->
+                    <div class="analytics-section" id="sales-analytics">
+                        <h2 class="analytics-section-title">
+                            <i class="fas fa-shopping-cart"></i> Sales Data Analysis
+                        </h2>
+
+                        <div class="analytics-metrics-grid">
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-receipt"></i></div>
+                                <div class="metric-value">2,700</div>
+                                <div class="metric-label">Total Orders</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="metric-value">$2,655</div>
+                                <div class="metric-label">Avg Unit Price</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="metric-value">$68,044</div>
+                                <div class="metric-label">Avg Order Value</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-store"></i></div>
+                                <div class="metric-value">3</div>
+                                <div class="metric-label">Sales Channels</div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-insights-panel">
+                            <h3><i class="fas fa-lightbulb"></i> Sales Insights</h3>
+                            <div class="insight-item">
+                                <i class="fas fa-trophy"></i>
+                                Total revenue: ~$183.7 million
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-store"></i>
+                                Primary sales channel: dealer (1,404 orders - 52%)
+                            </div>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-area"></i> Detailed Sales Analysis</h3>
+                            <img src="visualizations/sales_analysis.png" alt="Sales Analysis" class="viz-image">
+                        </div>
+                    </div>
+
+                    <!-- Testing Analytics -->
+                    <div class="analytics-section" id="testing-analytics">
+                        <h2 class="analytics-section-title">
+                            <i class="fas fa-flask"></i> Testing Data Analysis
+                        </h2>
+
+                        <div class="analytics-metrics-grid">
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-vial"></i></div>
+                                <div class="metric-value">3,200</div>
+                                <div class="metric-label">Total Tests</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-check-circle"></i></div>
+                                <div class="metric-value">82.4%</div>
+                                <div class="metric-label">Pass Rate</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-clipboard-check"></i></div>
+                                <div class="metric-value">5</div>
+                                <div class="metric-label">Test Types</div>
+                            </div>
+                            <div class="analytics-metric-card">
+                                <div class="metric-icon"><i class="fas fa-star"></i></div>
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Data Quality</div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-insights-panel">
+                            <h3><i class="fas fa-lightbulb"></i> Testing Insights</h3>
+                            <div class="insight-item">
+                                <i class="fas fa-percentage"></i>
+                                Test pass rate: 82.4% (2,637 passed out of 3,200)
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-check-double"></i>
+                                All missing values successfully handled
+                            </div>
+                        </div>
+
+                        <div class="analytics-viz-card">
+                            <h3><i class="fas fa-chart-area"></i> Detailed Testing Analysis</h3>
+                            <img src="visualizations/testing_analysis.png" alt="Testing Analysis" class="viz-image">
+                        </div>
+                    </div>
+
+                    <!-- Comparison Analytics -->
+                    <div class="analytics-section" id="comparison-analytics">
+                        <h2 class="analytics-section-title">
+                            <i class="fas fa-balance-scale"></i> Raw vs Cleaned Data Comparison
+                        </h2>
+
+                        <div class="comparison-panel">
+                            <h3><i class="fas fa-flag"></i> Field Reports</h3>
+                            <div class="comparison-grid">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Records</div>
+                                    <div class="comparison-value">2,300</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> No loss
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Missing Values</div>
+                                    <div class="comparison-value">736 → 0</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-check"></i> 100% resolved
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Quality Score</div>
+                                    <div class="comparison-value">97.6 → 100</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> +2.4
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-panel">
+                            <h3><i class="fas fa-industry"></i> Manufacturing Data</h3>
+                            <div class="comparison-grid">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Records</div>
+                                    <div class="comparison-value">2,500</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> No loss
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Avg Production</div>
+                                    <div class="comparison-value">250 units</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-check"></i> Consistent
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-panel">
+                            <h3><i class="fas fa-shopping-cart"></i> Sales Data</h3>
+                            <div class="comparison-grid">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Records</div>
+                                    <div class="comparison-value">2,700</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> No loss
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Missing Values</div>
+                                    <div class="comparison-value">450 → 0</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-check"></i> 100% resolved
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Quality Score</div>
+                                    <div class="comparison-value">98.6 → 100</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> +1.4
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comparison-panel">
+                            <h3><i class="fas fa-flask"></i> Testing Data</h3>
+                            <div class="comparison-grid">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Records</div>
+                                    <div class="comparison-value">3,200</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> No loss
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Missing Values</div>
+                                    <div class="comparison-value">494 → 0</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-check"></i> 100% resolved
+                                    </div>
+                                </div>
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Quality Score</div>
+                                    <div class="comparison-value">99.0 → 100</div>
+                                    <div class="change positive">
+                                        <i class="fas fa-arrow-up"></i> +1.0
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section class="tab-content" id="academics">
+        <div class="academics-layout">
+            <!-- Sidebar -->
+            <aside class="academics-sidebar">
+                <h3 class="sidebar-title"><i class="fas fa-book"></i> Subjects</h3>
+                <nav class="sidebar-nav">
+                    <button class="sidebar-btn active" data-subject="oop">
+                        <i class="fab fa-java"></i>
+                        <span>OOP</span>
+                        <small>Object-Oriented Programming</small>
+                    </button>
+                    <button class="sidebar-btn" data-subject="daa">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>DAA</span>
+                        <small>Design & Analysis of Algorithms</small>
+                    </button>
+                    <button class="sidebar-btn" data-subject="cao">
+                        <i class="fas fa-microchip"></i>
+                        <span>CAO</span>
+                        <small>Computer Architecture</small>
+                    </button>
+                    <button class="sidebar-btn" data-subject="probability">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Probability</span>
+                        <small>Probability & Statistics</small>
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="academics-content">
+                <!-- OOP Section -->
+                <div class="subject-content active" id="oop">
+                    <div class="subject-header">
+                        <h2><i class="fab fa-java"></i> Object-Oriented Programming</h2>
+                        <span class="badge">Java Backend</span>
+                    </div>
+                    <div class="placeholder-card">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>Java backend implementation and OOP concepts will be added in future updates.</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Class Design & Architecture</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Inheritance & Polymorphism</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Design Patterns</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAA Section -->
+                <div class="subject-content" id="daa">
+                    <div class="subject-header">
+                        <h2><i class="fas fa-project-diagram"></i> Design & Analysis of Algorithms</h2>
+                        <span class="badge">Flowcharts & Complexity</span>
+                    </div>
+
+                    <div class="flowchart-controls">
+                        <button class="flowchart-btn active" data-flowchart="0">
+                            <i class="fas fa-sitemap"></i> Algorithm 1
+                        </button>
+                        <!-- <button class="flowchart-btn" data-flowchart="1">
+                            <i class="fas fa-sitemap"></i> Algorithm 2
+                        </button>
+                        <button class="flowchart-btn" data-flowchart="2">
+                            <i class="fas fa-sitemap"></i> Algorithm 3
+                        </button> -->
+                    </div>
+
+                    <div class="flowchart-viewer">
+                        <div class="flowchart-container" id="flowchart-container">
+                            <div class="zoom-controls">
+                                <button class="zoom-btn" id="zoom-in" title="Zoom In">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                                <button class="zoom-btn" id="zoom-out" title="Zoom Out">
+                                    <i class="fas fa-search-minus"></i>
+                                </button>
+                                <button class="zoom-btn" id="zoom-reset" title="Reset Zoom">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                                <button class="zoom-btn" id="zoom-fullscreen" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <span class="zoom-level" id="zoom-level">100%</span>
+                            </div>
+                            <div class="flowchart-wrapper" id="flowchart-wrapper">
+                                <img id="flowchart-image" src="flowcharts/algorithm1.png" alt="Algorithm Flowchart" class="flowchart-img" draggable="false">
+                            </div>
+                            <div class="flowchart-placeholder">
+                                <i class="fas fa-image"></i>
+                                <p>Add your flowchart images to the 'flowcharts' folder</p>
+                                <small>Supported formats: PNG, JPG, SVG</small>
+                                <small class="zoom-hint"><i class="fas fa-mouse"></i> Use mouse wheel or zoom controls to zoom</small>
+                            </div>
+                        </div>
+                        <div class="flowchart-info">
+                            <h4 id="flowchart-title">Algorithm Flowchart</h4>
+                            <p id="flowchart-description">Interactive flowchart visualization for algorithm analysis</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CAO Section -->
+                <div class="subject-content" id="cao">
+                    <div class="subject-header">
+                        <h2><i class="fas fa-microchip"></i> Computer Architecture & Organization</h2>
+                        <span class="badge">Digital Logic Design</span>
+                    </div>
+
+                    <div class="circuit-info">
+                        <div class="info-box">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Interactive circuit simulation using Logisim. Click components to interact.</p>
+                        </div>
+                    </div>
+
+                    <div class="circuit-container">
+                        <iframe
+                            id="logisim-frame"
+                            src="https://circuitverse.org/simulator/embed/placeholder"
+                            class="circuit-iframe"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                        <div class="circuit-placeholder">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Logisim Circuit Simulator</h3>
+                            <p>Upload your cao.circ file to CircuitVerse and update the embed URL</p>
+                            <a href="https://circuitverse.org/" target="_blank" class="circuit-link">
+                                <i class="fas fa-external-link-alt"></i> Visit CircuitVerse
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="circuit-controls">
+                        <button class="circuit-btn" id="reload-circuit">
+                            <i class="fas fa-sync-alt"></i> Reload Circuit
+                        </button>
+                        <a href="circuits/cao.circ" download class="circuit-btn download-btn">
+                            <i class="fas fa-download"></i> Download .circ File
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Probability Section -->
+                <div class="subject-content" id="probability">
+                    <div class="subject-header">
+                        <h2><i class="fas fa-chart-pie"></i> Probability & Statistics</h2>
+                        <span class="badge">Statistical Analysis</span>
+                    </div>
+                    <div class="placeholder-card">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>Probability distributions and statistical analysis tools will be added in future updates.</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Probability Distributions</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Hypothesis Testing</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Statistical Inference</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 University Project Presentation | Data Analysis & Research</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

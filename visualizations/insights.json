@@ -1,0 +1,61 @@
+{
+  "overall": {
+    "total_records_raw": 10700,
+    "total_records_cleaned": 10700,
+    "overall_quality_improvement": -0.5178511904761862,
+    "key_findings": [
+      "Processed 10,700 records across 4 datasets",
+      "Maintained 10,700 clean records",
+      "Average quality improvement: +-0.5 points",
+      "All datasets achieved 100% data completeness after cleaning"
+    ]
+  },
+  "datasets": {
+    "field": {
+      "quality_improvement": 2.4000000000000057,
+      "data_cleaning_effectiveness": 100.0,
+      "records_removed": 0,
+      "records_removed_percentage": 0.0,
+      "key_insights": [
+        "Excellent data quality after cleaning",
+        "All missing values successfully handled",
+        "Minimal data loss during cleaning process",
+        "Most common failure mode: pad_wear (573 occurrences)"
+      ]
+    },
+    "manufacturing": {
+      "quality_improvement": -6.92914285714285,
+      "data_cleaning_effectiveness": -421.92066805845513,
+      "records_removed": 0,
+      "records_removed_percentage": 0.0,
+      "key_insights": [
+        "Minimal data loss during cleaning process",
+        "Average production quantity: 250 units"
+      ]
+    },
+    "sales": {
+      "quality_improvement": 1.4285714285714306,
+      "data_cleaning_effectiveness": 100.0,
+      "records_removed": 0,
+      "records_removed_percentage": 0.0,
+      "key_insights": [
+        "Excellent data quality after cleaning",
+        "All missing values successfully handled",
+        "Minimal data loss during cleaning process",
+        "Primary sales channel: dealer (1404 orders)"
+      ]
+    },
+    "testing": {
+      "quality_improvement": 1.0291666666666686,
+      "data_cleaning_effectiveness": 100.0,
+      "records_removed": 0,
+      "records_removed_percentage": 0.0,
+      "key_insights": [
+        "Excellent data quality after cleaning",
+        "All missing values successfully handled",
+        "Minimal data loss during cleaning process",
+        "Test pass rate: 82.4%"
+      ]
+    }
+  }
+}
