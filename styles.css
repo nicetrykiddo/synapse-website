@@ -2814,54 +2814,237 @@ footer p {
     margin-right: 0.25rem;
 }
 
+/* OOP Tab Content */
+.oop-tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.oop-definition {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(156, 77, 204, 0.1));
+    border-left: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+}
+
+.oop-definition h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.oop-definition p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Code Block Styling */
+.code-block {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+}
+
+.code-header {
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-royal));
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 2px solid var(--gold);
+}
+
+.code-header i {
+    font-size: 1.1rem;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    background: #1e1e2e;
+}
+
+.code-block code {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+/* Java Syntax Highlighting (Basic) */
+.code-block code.java {
+    color: #d4d4d4;
+}
+
+/* Implementation Table */
+.implementation-table {
+    background: var(--bg-card);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--shadow-premium);
+}
+
+.implementation-table h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.oop-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.oop-table thead {
+    background: linear-gradient(135deg, var(--bg-tertiary), var(--purple-deep));
+}
+
+.oop-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--gold);
+}
+
+.oop-table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.oop-table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.1), transparent);
+}
+
+.oop-table td {
+    padding: 1rem 1.25rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.oop-table td strong {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* OOP Benefit Section */
+.oop-benefit {
+    background: linear-gradient(135deg, rgba(0, 230, 118, 0.1), rgba(212, 175, 55, 0.1));
+    border-left: 4px solid var(--success);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+}
+
+.oop-benefit h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: var(--success);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.oop-benefit p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
 /* Responsive for OOP Section */
 @media (max-width: 1024px) {
-    .oop-concepts-grid {
-        grid-template-columns: 1fr;
+    .oop-tab-content {
+        gap: 1.5rem;
     }
 
-    .oop-concept-header {
+    .code-block pre {
+        padding: 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .implementation-table {
         padding: 1.5rem;
+        overflow-x: auto;
     }
 
-    .oop-icon {
-        font-size: 2.5rem;
-    }
-
-    .oop-concept-header h3 {
-        font-size: 1.5rem;
-    }
-
-    .oop-concept-body {
-        padding: 1.5rem;
+    .oop-table {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 768px) {
-    .oop-concept-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.25rem;
+    .oop-definition,
+    .oop-benefit {
+        padding: 1.25rem 1.5rem;
     }
 
-    .oop-icon {
-        font-size: 2.25rem;
+    .oop-definition h3,
+    .oop-benefit h3 {
+        font-size: 1.25rem;
     }
 
-    .oop-concept-header h3 {
-        font-size: 1.35rem;
-    }
-
-    .oop-section {
-        padding: 1.25rem;
-    }
-
-    .oop-section h4 {
+    .oop-definition p,
+    .oop-benefit p {
         font-size: 1rem;
     }
 
-    .implementation-list li {
+    .code-block pre {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .code-header {
+        padding: 0.85rem 1.25rem;
         font-size: 0.9rem;
-        padding: 0.65rem 0.85rem;
+    }
+
+    .implementation-table {
+        padding: 1.25rem;
+    }
+
+    .implementation-table h3 {
+        font-size: 1.25rem;
+    }
+
+    .oop-table {
+        font-size: 0.85rem;
+    }
+
+    .oop-table th,
+    .oop-table td {
+        padding: 0.75rem 1rem;
+    }
+
+    /* Make table scrollable on mobile */
+    .implementation-table {
+        overflow-x: auto;
+    }
+
+    .oop-table {
+        min-width: 600px;
     }
 }
