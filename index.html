@@ -373,42 +373,23 @@
     <!-- Analytics Section -->
     <section class="tab-content" id="analytics">
         <div class="container">
-            <div class="analytics-layout">
-                <!-- Analytics Sidebar -->
-                <aside class="analytics-sidebar">
-                    <h3 class="sidebar-title"><i class="fas fa-chart-bar"></i> Analytics</h3>
-                    <nav class="sidebar-nav analytics-nav">
-                        <button class="sidebar-btn active" data-analytics="overview-analytics">
-                            <i class="fas fa-home"></i>
-                            <span>Overview</span>
-                        </button>
-                        <button class="sidebar-btn" data-analytics="field-analytics">
-                            <i class="fas fa-flag"></i>
-                            <span>Field Reports</span>
-                        </button>
-                        <button class="sidebar-btn" data-analytics="manufacturing-analytics">
-                            <i class="fas fa-industry"></i>
-                            <span>Manufacturing</span>
-                        </button>
-                        <button class="sidebar-btn" data-analytics="sales-analytics">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Sales Data</span>
-                        </button>
-                        <button class="sidebar-btn" data-analytics="testing-analytics">
-                            <i class="fas fa-flask"></i>
-                            <span>Testing Data</span>
-                        </button>
-                        <button class="sidebar-btn" data-analytics="comparison-analytics">
-                            <i class="fas fa-balance-scale"></i>
-                            <span>Comparison</span>
-                        </button>
-                    </nav>
-                </aside>
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2><i class="fas fa-chart-line"></i> Exploratory Data Analysis Dashboard</h2>
+                <div class="controls">
+                    <select id="analytics-dataset-selector" class="limit-select" style="min-width: 250px;">
+                        <option value="overview">📊 Overview - All Datasets</option>
+                        <option value="field">🚩 Field Reports Analysis</option>
+                        <option value="manufacturing">🏭 Manufacturing Data</option>
+                        <option value="sales">🛒 Sales Data Analysis</option>
+                        <option value="testing">🧪 Testing Data Analysis</option>
+                        <option value="comparison">⚖️ Data Comparison</option>
+                    </select>
+                </div>
+            </div>
 
-                <!-- Analytics Content -->
-                <main class="analytics-content">
+            <div class="analytics-content-wrapper">
                     <!-- Overview Analytics -->
-                    <div class="analytics-section active" id="overview-analytics">
+                    <div class="analytics-dataset-section active" data-dataset="overview">
                         <div class="analytics-metrics-grid">
                             <div class="analytics-metric-card">
                                 <div class="metric-icon"><i class="fas fa-database"></i></div>
@@ -512,7 +493,7 @@
                     </div>
 
                     <!-- Field Reports Analytics -->
-                    <div class="analytics-section" id="field-analytics">
+                    <div class="analytics-dataset-section" data-dataset="field">
                         <h2 class="analytics-section-title">
                             <i class="fas fa-flag"></i> Field Reports Analysis
                         </h2>
@@ -578,7 +559,7 @@
                     </div>
 
                     <!-- Manufacturing Analytics -->
-                    <div class="analytics-section" id="manufacturing-analytics">
+                    <div class="analytics-dataset-section" data-dataset="manufacturing">
                         <h2 class="analytics-section-title">
                             <i class="fas fa-industry"></i> Manufacturing Data Analysis
                         </h2>
@@ -634,7 +615,7 @@
                     </div>
 
                     <!-- Sales Analytics -->
-                    <div class="analytics-section" id="sales-analytics">
+                    <div class="analytics-dataset-section" data-dataset="sales">
                         <h2 class="analytics-section-title">
                             <i class="fas fa-shopping-cart"></i> Sales Data Analysis
                         </h2>
@@ -696,7 +677,7 @@
                     </div>
 
                     <!-- Testing Analytics -->
-                    <div class="analytics-section" id="testing-analytics">
+                    <div class="analytics-dataset-section" data-dataset="testing">
                         <h2 class="analytics-section-title">
                             <i class="fas fa-flask"></i> Testing Data Analysis
                         </h2>
@@ -762,7 +743,7 @@
                     </div>
 
                     <!-- Comparison Analytics -->
-                    <div class="analytics-section" id="comparison-analytics">
+                    <div class="analytics-dataset-section" data-dataset="comparison">
                         <h2 class="analytics-section-title">
                             <i class="fas fa-balance-scale"></i> Raw vs Cleaned Data Comparison
                         </h2>
@@ -868,7 +849,6 @@
                             </div>
                         </div>
                     </div>
-                </main>
             </div>
         </div>
     </section>

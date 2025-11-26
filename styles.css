@@ -2090,6 +2090,19 @@ footer p {
     animation: fadeIn 0.3s ease-in-out;
 }
 
+.analytics-dataset-section {
+    display: none;
+}
+
+.analytics-dataset-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.analytics-content-wrapper {
+    width: 100%;
+}
+
 .analytics-section-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 2rem;

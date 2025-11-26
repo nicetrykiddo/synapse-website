@@ -1078,3 +1078,39 @@ if (document.readyState === 'loading') {
 } else {
     initializeProbabilityTabs();
 }
+
+// ========================================
+// ANALYTICS DATASET DROPDOWN SELECTOR
+// ========================================
+
+function initializeAnalyticsDropdown() {
+    const dropdown = document.getElementById('analytics-dataset-selector');
+    const datasetSections = document.querySelectorAll('.analytics-dataset-section');
+
+    if (!dropdown || datasetSections.length === 0) return;
+
+    dropdown.addEventListener('change', (e) => {
+        const selectedDataset = e.target.value;
+
+        // Hide all sections
+        datasetSections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Show selected section
+        const targetSection = document.querySelector(`.analytics-dataset-section[data-dataset="${selectedDataset}"]`);
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
+
+        // Smooth scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// Initialize analytics dropdown when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeAnalyticsDropdown);
+} else {
+    initializeAnalyticsDropdown();
+}
