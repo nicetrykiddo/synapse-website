@@ -596,23 +596,115 @@
                             <h3><i class="fas fa-lightbulb"></i> Key Insights</h3>
                             <div class="insight-item">
                                 <i class="fas fa-chart-line"></i>
-                                Failures remain consistent between 60–95 per month, showing stable field reliability
+                                Failures range from 89 (Feb) to 185 (Aug) per month, with peak failures in summer months (Jul-Oct)
                             </div>
                             <div class="insight-item">
                                 <i class="fas fa-tools"></i>
-                                Pad wear is the most frequent failure mode, indicating scope for better material selection
+                                Pad wear is the most frequent failure mode at 18.03%, indicating scope for better material selection
                             </div>
                             <div class="insight-item">
                                 <i class="fas fa-cogs"></i>
-                                Most failures are wear-related (pad wear, sensor failure, leakage, brake shim wear, noise/vibration)
+                                Most failures are wear-related with fairly balanced distribution across all 6 failure modes
                             </div>
                             <div class="insight-item">
-                                <i class="fas fa-lightbulb"></i>
-                                No extreme spikes observed - issues are not seasonal or sudden
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Severity level 3 dominates at 35.94%, followed by level 4 at 25.24%
+                            </div>
+                            <div class="insight-item">
+                                <i class="fas fa-user"></i>
+                                Reports split almost evenly: 51.16% from customers, 48.84% from dealers
                             </div>
                             <div class="insight-item">
                                 <i class="fas fa-wrench"></i>
-                                Opportunities for improved manufacturing tolerances and process optimization in assembly
+                                Summer spike suggests temperature-related failures requiring improved heat resistance
+                            </div>
+                        </div>
+
+                        <!-- Data Aggregation Tables -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                            <!-- Failures Per Month -->
+                            <div class="analytics-viz-card" style="padding: 1.5rem;">
+                                <h4 style="margin-bottom: 1rem; color: var(--gold);"><i class="fas fa-calendar-alt"></i> Failures Per Month</h4>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--gold);">
+                                            <th style="padding: 0.5rem; text-align: left; color: var(--text-primary);">Month</th>
+                                            <th style="padding: 0.5rem; text-align: right; color: var(--text-primary);">Count</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="font-size: 0.9rem;">
+                                        <tr><td style="padding: 0.4rem;">Jan</td><td style="padding: 0.4rem; text-align: right;">103</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Feb</td><td style="padding: 0.4rem; text-align: right;">89</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Mar</td><td style="padding: 0.4rem; text-align: right;">122</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Apr</td><td style="padding: 0.4rem; text-align: right;">114</td></tr>
+                                        <tr><td style="padding: 0.4rem;">May</td><td style="padding: 0.4rem; text-align: right;">123</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Jun</td><td style="padding: 0.4rem; text-align: right;">141</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Jul</td><td style="padding: 0.4rem; text-align: right; font-weight: bold; color: var(--gold);">171</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Aug</td><td style="padding: 0.4rem; text-align: right; font-weight: bold; color: var(--gold);">185</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Sep</td><td style="padding: 0.4rem; text-align: right; font-weight: bold; color: var(--gold);">159</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Oct</td><td style="padding: 0.4rem; text-align: right; font-weight: bold; color: var(--gold);">175</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Nov</td><td style="padding: 0.4rem; text-align: right;">147</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Dec</td><td style="padding: 0.4rem; text-align: right;">107</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Failure Mode Percentage -->
+                            <div class="analytics-viz-card" style="padding: 1.5rem;">
+                                <h4 style="margin-bottom: 1rem; color: var(--gold);"><i class="fas fa-tools"></i> Failure Mode Distribution</h4>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--gold);">
+                                            <th style="padding: 0.5rem; text-align: left; color: var(--text-primary);">Failure Mode</th>
+                                            <th style="padding: 0.5rem; text-align: right; color: var(--text-primary);">%</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="font-size: 0.9rem;">
+                                        <tr><td style="padding: 0.4rem;">Pad Wear</td><td style="padding: 0.4rem; text-align: right; font-weight: bold; color: var(--gold);">18.03</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Overheating</td><td style="padding: 0.4rem; text-align: right;">16.87</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Sensor Failure</td><td style="padding: 0.4rem; text-align: right;">16.87</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Leakage</td><td style="padding: 0.4rem; text-align: right;">16.38</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Noise/Vibration</td><td style="padding: 0.4rem; text-align: right;">16.14</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Brake Shim Wear</td><td style="padding: 0.4rem; text-align: right;">15.71</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Severity Distribution -->
+                            <div class="analytics-viz-card" style="padding: 1.5rem;">
+                                <h4 style="margin-bottom: 1rem; color: var(--gold);"><i class="fas fa-exclamation-triangle"></i> Severity Distribution</h4>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--gold);">
+                                            <th style="padding: 0.5rem; text-align: left; color: var(--text-primary);">Severity</th>
+                                            <th style="padding: 0.5rem; text-align: right; color: var(--text-primary);">%</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="font-size: 0.9rem;">
+                                        <tr><td style="padding: 0.4rem;">Level 3</td><td style="padding: 0.4rem; text-align: right; font-weight: bold; color: var(--gold);">35.94</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Level 4</td><td style="padding: 0.4rem; text-align: right;">25.24</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Level 2</td><td style="padding: 0.4rem; text-align: right;">16.69</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Level 5</td><td style="padding: 0.4rem; text-align: right;">16.38</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Level 1</td><td style="padding: 0.4rem; text-align: right;">5.75</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Reported By -->
+                            <div class="analytics-viz-card" style="padding: 1.5rem;">
+                                <h4 style="margin-bottom: 1rem; color: var(--gold);"><i class="fas fa-user-friends"></i> Reported By</h4>
+                                <table style="width: 100%; border-collapse: collapse;">
+                                    <thead>
+                                        <tr style="border-bottom: 2px solid var(--gold);">
+                                            <th style="padding: 0.5rem; text-align: left; color: var(--text-primary);">Source</th>
+                                            <th style="padding: 0.5rem; text-align: right; color: var(--text-primary);">%</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="font-size: 0.9rem;">
+                                        <tr><td style="padding: 0.4rem;">Customer</td><td style="padding: 0.4rem; text-align: right;">51.16</td></tr>
+                                        <tr><td style="padding: 0.4rem;">Dealer</td><td style="padding: 0.4rem; text-align: right;">48.84</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
