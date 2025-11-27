@@ -228,10 +228,6 @@ function renderAnalytics(data) {
                     <span>Total Records:</span>
                     <span class="stat-value">${stats.totalCount.toLocaleString()}</span>
                 </div>
-                <div class="stat-row">
-                    <span>Cardinality:</span>
-                    <span class="stat-value">${((stats.uniqueCount / stats.totalCount) * 100).toFixed(1)}%</span>
-                </div>
             </div>
         </div>
     `).join('');
